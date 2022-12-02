@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>MOKEPON</title>
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="shortcut icon" href="./assets/pokeball.png"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section id="seleccionar-mascota">
+            <h1 class="titulo">🔥💧🌱🌀 Mokepon 🌀🌱💧🔥</h1>
+            <h3 class="subtitulo3">Elige tu mascota:</h3>
+            <div id="contenedorTarjetas">
+                
+            </div>          
+            <div class="wrapper">
+                <a class="button" id="button-seleccionar" href="#">Seleccionar</a>
+            </div>
+            <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                    <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                        <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                    </filter>
+                </defs>
+            </svg>
+            
+        </section>
+        
+        <section id="ver-mapa">
+            <h2 class="subtitulo">🔥💧🌱🌀 Recorre el mapa con tu Mokepon 🌀🌱💧🔥</h2>
+            <h3 class="subtitulo3">Cuando choques con otro Mokepon comenzará la batalla.</h3>
+            <canvas id="mapa"></canvas>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
+            <div>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
+            </div>
+        </section>
+
+        <section id="seleccionar-ataque">
+            <h1 class="titulo">🔥💧🌱🌀 Batalla 🌀🌱💧🔥</h1>
+            <h3 class="subtitulo3">Elige tu secuencia de ataques:</h3>
+            <div class="tarjetas-ataques">
+                <div class="wrapper" id="botonesAccion">
+                   
+                </div>
+                <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                        <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                            <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+            <div id="mensajes">
+                <p id="resultado">¡Mucha suerte!</p>
+                <section id="reiniciar">
+                    <div class="wrapper">
+                        <span class="span-botones">
+                            <a class="button" id="boton-reiniciar" href="#">Reiniciar</a>
+                        </span>
+                    </div>
+                </section>
+            </div>
+            <div class="ataques">
+                <div class="ataques-jugador">
+                    <p id="span-vidasJugador">0</p>
+                    <p id="span-mascotaJugador"></p>
+                    <div id="ataque-del-jugador"></div>
+                </div>
+                <div class="ataques-enemigo">
+                    <p id="span-vidasEnemigo">0</p>
+                    <p id="span-mascotaEnemigo"></p>
+                    <div id="ataque-del-enemigo"></div>
+                </div>
+                <div class="resultado-juego">
+                    <p><br></p>
+                    <p><br></p>
+                    <div id="resultado-combate-rondas"></div>
+                </div>
+            </div>
+        </section>
+        <script src="./js/mokepon.js"></script>
+    </body>
+</html>

@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Chicle&family=Gorditas&family=Peralta&family=Salsa&display=swap');
+body{
+    background-color: #001E6C;
+    font-family: 'Peralta', cursive;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg);
+    overflow: hidden;
+}
+.body2{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titulo{
+    color:white;
+    font-size: 32px;
+    margin: 10px;
+    
+}
+.subtitulo{
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+}
+.subtitulo3{
+    color: white;
+    font-size: 15px;
+    margin: 10px;
+}
+.tarjetas{
+    display: flex;
+    gap: 9px;
+    margin: 9px;
+}
+.tarjeta-de-mokepon{
+    width: 230px;
+    height: 50px;
+    background: #035397;
+    padding: 10px;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 4px;
+}
+.tarjeta-de-mokepon img{
+    width: 110px;
+}
+.tarjeta-de-mokepon2{
+    width: 230px;
+    height: 50px;
+    background: #035397;
+    padding: 10px;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 4px;
+}
+.tarjeta-de-mokepon2 img{
+    width: 90px;
+}
+.tarjetas-ataques{
+    display: flex;
+    gap: 10px;
+}
+input{
+    display: none;
+}
+input:checked + label{
+    background-color: #ff7c2a;
+}
+:root {
+    --bg: #001E6C;
+    --color: #eee;
+    --font: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+    padding: 1.5rem 0;
+    filter: url('#goo');
+    display: flex;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    background: var(--color);
+    color: var(--bg);
+    font-weight: bold;
+    padding: 1.18em 1.32em 1.03em;
+    line-height: 1;
+    border-radius: 1em;
+    position: relative;
+    min-width: 10.23em;
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 1.25rem;
+}
+.button:before,
+.button:after {
+    width: 4.4em;
+    height: 2.95em;
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background: var(--color);
+    border-radius: 50%;
+    transition: transform 1s ease;
+    transform: scale(0);
+    z-index: -1;
+}
+
+.button:before {
+    top: -25%;
+    left: 20%;
+}
+
+.button:after {
+    bottom: -25%;
+    right: 20%;
+}
+
+.button:hover:before,
+.button:hover:after {
+    transform: none;
+}
+.buttonActionDisable {
+    display: inline-block;
+    text-align: center;
+    background: var(--color);
+    color: var(--bg);
+    font-weight: bold;
+    padding: 1.18em 1.32em 1.03em;
+    line-height: 1;
+    border-radius: 1em;
+    position: relative;
+    min-width: 2.23em;
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 1.25rem;
+    pointer-events: none;
+    opacity: 0.6;
+}
+.buttonAction {
+    display: inline-block;
+    text-align: center;
+    background: var(--color);
+    color: var(--bg);
+    font-weight: bold;
+    padding: 1.18em 1.32em 1.03em;
+    line-height: 1;
+    border-radius: 1em;
+    position: relative;
+    min-width: 2.23em;
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 1.25rem;
+}
+.buttonAction:before,
+.buttonAction:after {
+    width: 4.4em;
+    height: 2.95em;
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background: var(--color);
+    border-radius: 50%;
+    transition: transform 1s ease;
+    transform: scale(0);
+    z-index: -1;
+}
+.buttonAction:before {
+    top: -25%;
+    left: 20%;
+}
+.buttonAction:after {
+    bottom: -25%;
+    right: 20%;
+}
+.buttonAction:hover:before,
+.buttonAction:hover:after {
+    transform: none;
+}
+#seleccionar-ataque{
+    flex-direction: column;
+    align-items: center;
+}
+.boton-de-ataque{
+    background-color: #035397 ;
+}
+
+.span-botones{
+    margin: 10px;
+}
+
+.disable {
+    pointer-events: none;
+    opacity: 0.7;
+  }
+  #mensajes{
+    width: 280px;
+    background: #20d6ffb8;
+    padding: 20px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    color: white;
+    border-radius: 7px;
+    flex-direction: column;
+  }
+  .ataques{
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+  }
+  .ataques-jugador,.ataques-enemigo,.resultado-juego{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  }
+  #ver-mapa{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #ver-mapa button{
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 4px 0;
+  }
+@media (max-width:800px){
+ .tarjetas,.tarjetas-ataques{
+    flex-direction: column;
+ }
+ .wrapper,.disable{
+    flex-direction: column;
+ }
+ .span-botones,.disable {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+ }
+ body,.body2{
+    overflow-y: auto;
+    overflow-x: hidden;
+ }
+}
+@media (max-width:300px){
+    #ver-mapa div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+     }
+}
